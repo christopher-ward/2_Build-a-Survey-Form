@@ -26,3 +26,35 @@ input:required {
 input:required:invalid {
   border-color: #C00000;
 } */
+
+/* Selects any invalid <input> */
+input:invalid {
+  background-color: #ffdddd;
+}
+
+* {
+  background-color: #0C141F;
+}
+
+body {
+  color: #FF410DFF;
+}
+
+label {
+  color: #05DBF2;
+}
+
+input {
+  border-color: #05AFF2;
+}
+
+#submit {
+  color: #05DBF2;;
+}
+
+/* Color Theme Swatches in Hex */
+.Hickson's-fan-coral-1-hex { color: #044BD9; }
+.Hickson's-fan-coral-2-hex { color: #0583F2; }
+.Hickson's-fan-coral-3-hex { color: #05AFF2; }
+.Hickson's-fan-coral-4-hex { color: #05DBF2; }
+.Hickson's-fan-coral-5-hex { color: #BF5D39; }
