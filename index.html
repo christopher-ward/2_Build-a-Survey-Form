@@ -6,14 +6,17 @@
     <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
   </head>
   <body>
+    <!-- FCC Format Test Script -->
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <!-- Main Content Section -->
     <main>
       <header><h1 id="title">My Survey Form</h1></header>
-      <p id="description">Description of the Survey Form</p>
+      <p id="description">This form is to get to know a little bit about the background of the user.</p>
 
+      <!-- This is the Form -->
       <form id="survey-form" class="forms" action="./index.html" method="post">
 
-        <!-- Typing Information Control -->
+        <!-- Typed Input -->
         <label for="name" id="name-label">
           Name: <br><input type="text" placeholder="John Doe" id="name" name="name" required>
         </label>
@@ -23,12 +26,12 @@
         </label>
         <br><br>
         <label for="number" id="number-label">
-          Number: <br><input type="number" placeholder="Enter a number" id="number" name="number" required min="1" max="50">
+          Age: <br><input type="number" placeholder="Number between 1 and 120. Sorry Immortals." id="number" name="number" required min="1" max="120">
         </label>
         <br><br>
 
         <!-- Dropdown Selection -->
-        <label for="dropdown">
+        <label for="dropdown" id="drop-label">
           Of the following languages, which is your favorite? <br>
           <!-- Use ctrl/cmd + click to select multiple choices. <br> -->
           <select id="dropdown" name="dropdown"> <!-- multiple attribute would allow for multiple selection -->
@@ -44,7 +47,7 @@
         <br><br>
 
         <!-- Radio Selection -->
-        <fieldset>
+        <fieldset id="radios">
           <legend>What level of expertise are you with the chosen language?</legend>
           <input id="beginner" type="radio" name="expertise" value="beginner" checked>
           <label for="beginner">Beginner</label>
@@ -58,37 +61,28 @@
         <br><br>
 
         <!-- Checkboxes -->
-        <fieldset>
+        <fieldset id="checkboxes">
           <legend>Select all the languages you are at least somewhat familiar with.</legend>
-          <input id="python" type="checkbox" name="languages" value="python">
-          <label for="python">Python</label>
-          <input id="java" type="checkbox" name="languages" value="java">
-          <label for="java">Java</label>
-          <input id="javascript" type="checkbox" name="languages" value="javascript">
-          <label for="javascript">JavaScript</label>
-          <input id="perl" type="checkbox" name="languages" value="perl">
-          <label for="perl">Perl</label>
-          <input id="sql" type="checkbox" name="languages" value="sql">
-          <label for="sql">SQL</label>
-          <input id="c++" type="checkbox" name="languages" value="c++">
-          <label for="c++">C++</label>
-          <input id="c#" type="checkbox" name="languages" value="c#">
-          <label for="c#">C#</label>
-          <input id="visual-basic" type="checkbox" name="languages" value="visual basic">
-          <label for="visual basic">Visual Basic</label>
-          <input id="fortran" type="checkbox" name="languages" value="fortran">
-          <label for="fortran">Fortran</label>
-          <input id="r" type="checkbox" name="languages" value="r">
-          <label for="r">R</label>
-          <input id="matlab" type="checkbox" name="languages" value="matlab">
-          <label for="matlab">Matlab</label>
+          <label for="python"><input id="python" type="checkbox" name="languages" value="python">Python</label>
+          <label for="java"><input id="java" type="checkbox" name="languages" value="java">Java</label>
+          <label for="js"><input id="js" type="checkbox" name="languages" value="js">JavaScript</label>
+          <label for="perl"><input id="perl" type="checkbox" name="languages" value="perl">Perl</label>
+          <label for="sql"><input id="sql" type="checkbox" name="languages" value="sql">SQL</label>
+          <label for="c++"><input id="c++" type="checkbox" name="languages" value="c++">C++</label>
+          <label for="c#"><input id="c#" type="checkbox" name="languages" value="c#">C#</label>
+          <label for="vba"><input id="vba" type="checkbox" name="languages" value="vba">Visual Basic</label>
+          <label for="fortran"><input id="fortran" type="checkbox" name="languages" value="fortran">Fortran</label>
+          <label for="r"><input id="r" type="checkbox" name="languages" value="r">R</label>
+          <label for="matlab"><input id="matlab" type="checkbox" name="languages" value="matlab">Matlab</label>
         </fieldset>
         <br><br>
 
         <!-- Text Area -->
         <label for="comments">Leave us a comment on how you thought of this survey form.</label><br>
-        <textarea name="comments" rows="8" cols="80">Additional comments...</textarea>
+        <textarea id="comments" name="comments" rows="5" cols="50">Additional comments...</textarea>
+        <br><br>
 
+        <!-- Submit Button -->
         <button type="submit" id="submit" name="button">Submit</button>
 
       </form><br>

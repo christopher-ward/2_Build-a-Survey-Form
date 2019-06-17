@@ -1,10 +1,28 @@
 
 * {
   background-color: #0C141F;
+  font-size: 1.05rem;
 }
 
+/* Content */
+
 body {
-    color: #F21428;
+  display: flex;
+  justify-content: center;
+  color: #F21428;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 85%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 label {
@@ -15,8 +33,12 @@ input {
   border-color: #05AFF2;
 }
 
-#submit {
-  color: #05DBF2;
+form fieldset {
+  width: fit-content;
+}
+
+legend {
+  font-size: 1.1rem;
 }
 
 #name, #email, #numbder, #dropdown {
@@ -24,11 +46,35 @@ input {
   color: #E28A13;
 }
 
+#number {
+  width: 25rem;
+}
+
+#drop-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#checkboxes {
+  display: flex;
+}
+
+#comments {
+  color: #E28A13;
+  background-color: #0C141F;
+}
+
+#submit {
+  color: #05DBF2;
+  background-color: #0C141F;
+}
+
 /* Input Validation */
 
 #name:valid, #email:valid, #number:valid {
-  background-color: #63E3FF;
-  color: #071124;
+  background-color: #071124;
+  color: #63E3FF;
   font-weight: bold;
 }
 
@@ -40,19 +86,6 @@ input {
 
 input:required:invalid {
   border-color: #C00000;
-}
-
-/* form:invalid {
-  border: 2px solid #F21428;
-  width: fit-content;
-} */
-
-form fieldset {
-  width: 50%;
-}
-
-textarea {
-  color: #E28A13;
 }
 
 
