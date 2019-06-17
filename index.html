@@ -10,16 +10,89 @@
     <main>
       <header><h1 id="title">My Survey Form</h1></header>
       <p id="description">Description of the Survey Form</p>
-      <form id="survey-form" class="" action="index.html" method="post">
-        <label for="name">Name:</label>
-        <input type="text" placeholder="John Doe" id="name" name="name" required>
-        <label for="name">Email:</label>
-        <input type="text" placeholder="address@email.com" id="email" name="email" required pattern="*@*.*">
-        <label for="name">Number:</label>
-        <input type="text" placeholder="(123) 456-7890" id="number" name="number" required>
+
+      <form id="survey-form" class="forms" action="./index.html" method="post">
+
+        <!-- Typing Information Control -->
+        <label for="name" id="name-label">
+          Name: <br><input type="text" placeholder="John Doe" id="name" name="name" required>
+        </label>
+        <br><br>
+        <label for="email" id="email-label">
+          Email: <br><input type="email" placeholder="email@address.com" id="email" name="email" required>
+        </label>
+        <br><br>
+        <label for="number" id="number-label">
+          Number: <br><input type="number" placeholder="Enter a number" id="number" name="number" required min="1" max="50">
+        </label>
+        <br><br>
+
+        <!-- Dropdown Selection -->
+        <label for="dropdown">
+          Of the following languages, which is your favorite? <br>
+          <!-- Use ctrl/cmd + click to select multiple choices. <br> -->
+          <select id="dropdown" name="dropdown"> <!-- multiple attribute would allow for multiple selection -->
+            <option value="none" selected>-- Select a language --</option>
+            <option value="python">Python</option>
+            <option value="java">Java</option>
+            <option value="javascript">JavaScript</option>
+            <option value="perl">Perl</option>
+            <option value="sql">SQL</option>
+            <option value="c++">C++</option>
+          </select>
+        </label>
+        <br><br>
+
+        <!-- Radio Selection -->
+        <fieldset>
+          <legend>What level of expertise are you with the chosen language?</legend>
+          <input id="beginner" type="radio" name="expertise" value="beginner" checked>
+          <label for="beginner">Beginner</label>
+          <input id="intermediate" type="radio" name="expertise" value="intermediate">
+          <label for="intermediate">Intermediate</label>
+          <input id="expert" type="radio" name="expertise" value="expert">
+          <label for="expert">Expert</label>
+          <input id="master" type="radio" name="expertise" value="master">
+          <label for="master">Master</label>
+        </fieldset>
+        <br><br>
+
+        <!-- Checkboxes -->
+        <fieldset>
+          <legend>Select all the languages you are at least somewhat familiar with.</legend>
+          <input id="python" type="checkbox" name="languages" value="python">
+          <label for="python">Python</label>
+          <input id="java" type="checkbox" name="languages" value="java">
+          <label for="java">Java</label>
+          <input id="javascript" type="checkbox" name="languages" value="javascript">
+          <label for="javascript">JavaScript</label>
+          <input id="perl" type="checkbox" name="languages" value="perl">
+          <label for="perl">Perl</label>
+          <input id="sql" type="checkbox" name="languages" value="sql">
+          <label for="sql">SQL</label>
+          <input id="c++" type="checkbox" name="languages" value="c++">
+          <label for="c++">C++</label>
+          <input id="c#" type="checkbox" name="languages" value="c#">
+          <label for="c#">C#</label>
+          <input id="visual-basic" type="checkbox" name="languages" value="visual basic">
+          <label for="visual basic">Visual Basic</label>
+          <input id="fortran" type="checkbox" name="languages" value="fortran">
+          <label for="fortran">Fortran</label>
+          <input id="r" type="checkbox" name="languages" value="r">
+          <label for="r">R</label>
+          <input id="matlab" type="checkbox" name="languages" value="matlab">
+          <label for="matlab">Matlab</label>
+        </fieldset>
+        <br><br>
+
+        <!-- Text Area -->
+        <label for="comments">Leave us a comment on how you thought of this survey form.</label><br>
+        <textarea name="comments" rows="8" cols="80">Additional comments...</textarea>
+
         <button type="submit" id="submit" name="button">Submit</button>
-      </form>
-      <a href="./form_test.html">form test</a>
+
+      </form><br>
+
     </main>
   </body>
 </html>
