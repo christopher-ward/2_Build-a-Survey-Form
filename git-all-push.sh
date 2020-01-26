@@ -5,7 +5,6 @@
 # 5/14/19 Last improvements around 5/8/19 and works smooth.
 
 echo ""
-
 git status
 
 # Initial interaction with User
@@ -13,13 +12,11 @@ echo ""
 echo "Enter 'n' to cancel. Enter 'spec' to specify individual file, otherwise all files."
 echo ""
 read -p "commit -m " varCommit
-
 # Check that a commit message exists
 if [[ -z "$varCommit" ]]; then
 	echo ""
 	echo "Please put in a commit message."
 	exit
-
 # For adding specific files to be committed and pushed
 elif [[ "$varCommit" == "spec" ]] || [[ "$varCommit" == "'spec'" ]]; then
 	read -p "Specify file to add commit and push: " specificFile
@@ -53,27 +50,22 @@ elif [[ "$varCommit" == "spec" ]] || [[ "$varCommit" == "'spec'" ]]; then
 			exit
 		fi
 	fi
-
 # If initial response is no
 elif [[ "$varCommit" == "n" ]] || [[ "$varCommit" == "'n'" ]]; then
 	echo ""
 	echo "You canceled the script."
 	exit
-
 # Condition to add commit and push all unstaged files
 else
 	git add .
 	# Commit all files changed with stored message
 	git commit -m "$varCommit"
 fi
-
 # Push to github remote repository
 git push
-
 echo ""
 git status
 echo ""
-
 # Completion Response to User
 echo "------------------------------Script Complete------------------------------"
 echo ""
@@ -84,6 +76,5 @@ else
 fi
 echo ""
 echo "Pushed to github"
-
 # Exit script
 exit
